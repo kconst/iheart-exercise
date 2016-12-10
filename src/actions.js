@@ -25,7 +25,7 @@ export function fetchArtists(artist) {
     // set the search value
     dispatch(searchArtist(artist));
 
-    return fetch(`//localhost:8080/search/artist/${artist}`)
+    return fetch(`//iheart-exercise-kconst.c9users.io:8081/search/artist/${artist}`)
       .then(response => response.json())
       .then(json => {
           return dispatch(receiveArtists(artist, json))

@@ -37,6 +37,6 @@ app.get('/search/artist/:query', function (req, res) {
   );
 });
 
-app.listen(8080, function () {
+app.listen(8081, process.env.IP, function () {
   console.log('App listening on 127.0.0.1:8080');
 });

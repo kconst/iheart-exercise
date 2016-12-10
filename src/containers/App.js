@@ -31,13 +31,13 @@ class App extends Component {
     return (
       <div className="App">
         <input className="search" onChange={ this.handleChange } type="text" placeholder="Search artist"/>
-        {(() => {
-          if (!this.props.artists[0].description) {
+        { (() => {
+          if (this.props.artists[0] && !this.props.artists[0].description) {
             return <p>
               Results for { this.props.searchQuery }
             </p>
           }
-        })()}
+        })() }
         <Tiles data={ this.props.artists.slice(0, 6) }/>
       </div>
     )
