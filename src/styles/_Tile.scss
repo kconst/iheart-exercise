@@ -1,0 +1,29 @@
+.Tile {
+  border: 1px solid #cccccc;
+  display: inline-block;
+  font-size: 12px;
+  width: 30%;
+  float: left;
+  padding: 2px;
+  max-width: 250px;
+  min-height: 305px;
+  margin: 1.2%;
+
+  h2 {
+    font-size: 14px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: $maxWidth) {
+    margin-left: 10%;
+    min-height: 200px;
+
+    &:nth-child(odd) {
+      float: right;
+      margin-right: 10%;
+    }
+  }
+}

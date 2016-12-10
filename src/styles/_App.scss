@@ -1,0 +1,23 @@
+.App {
+  max-width: 768px;
+  margin: auto;
+  text-align: center;
+
+  input {
+    margin-top: 10px;
+    border-color: dodgerblue;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    p {
+      margin: 0;
+    }
+  }
+}
