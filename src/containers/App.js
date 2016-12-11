@@ -32,7 +32,6 @@ class App extends Component {
       <div className="App">
         <input className="search" onChange={ this.handleChange } type="text" placeholder="Search artist"/>
         { (() => {
-        debugger;
           if (this.props.searchQuery.loading) {
             return <div className="spinner"></div>
           }
@@ -40,7 +39,7 @@ class App extends Component {
         { (() => {
           if (this.props.results[0] && !this.props.results[0].description) {
             return <p>
-              Results for { this.props.searchQuery }
+              Results for { this.props.searchQuery.query }
             </p>
           }
         })() }
@@ -57,7 +56,7 @@ App.propTypes = {
 
 function mapStateToProps(state) {
   const { searchQuery, results } = state;
-debugger;
+
   return {
     searchQuery: searchQuery,
     results: results
