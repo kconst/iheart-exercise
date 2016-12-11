@@ -1,20 +1,23 @@
 import { combineReducers } from 'redux';
-import { SEARCH_ARTIST, RECEIVE_ARTISTS } from './actions.js';
+import { SEARCH_ARTIST, RECEIVE_ARTISTS_FAIL, RECEIVE_ARTISTS_SUCCESS } from './actions.js';
 
 function searchQuery(state = '', action) {
   switch (action.type) {
     case SEARCH_ARTIST:
-      return action.query;
+      return Object.assign({}, action);
 
     default:
       return state;
   }
 }
 
-function artistList(list = [], action) {
+function results(list = [], action) {
+  debugger;
   switch (action.type) {
-    case RECEIVE_ARTISTS:
-      return action.artists.concat([]);
+    case RECEIVE_ARTISTS_FAIL:
+    case RECEIVE_ARTISTS_SUCCESS:
+      
+      return action.results.concat([]);
 
     default:
       return list;
@@ -22,7 +25,7 @@ function artistList(list = [], action) {
 }
 
 const rootReducer = combineReducers({
-  artistList,
+  results,
   searchQuery
 });
 
