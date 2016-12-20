@@ -1,6 +1,6 @@
 ## iHeartRadio Project
 
-This project is made for the coding test assignment from iHeartRadio.  It utilizes a slightly modified version of the create react app bootstrap to include SASS.
+This project is an example of react/redux best practices utilizing a slightly modified version of the create react app bootstrap to include SASS.
 
 Use "npm install" from terminal and then start the app by running "npm start" and additionally running the server with "node server.js" in another terminal window.
 
